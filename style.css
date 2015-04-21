@@ -1,0 +1,74 @@
+/* This is a CSS comment.*/
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+} 
+:link { color: #6363A6; }  /* for unvisited links */
+:visited { color: #6E6EB8; } /* for visited links */
+body { color: #474747; 
+	background: #D2D2D2;
+	font: "helvetica";
+	}
+
+h2 { color: #005C5C; 
+	font-size: 30px;
+	font-weight: lighter;
+	margin-top: 47px;
+	margin-bottom: 5px;
+}
+
+p { padding-bottom: 20px;
+}
+
+h1 { color: #fff;
+	font-size: 50px;
+	font-weight: lighter;
+	padding-top: 5%
+}
+h3 {  color: #B4B4B4; 
+	font-size: 30px;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: -20px;
+}
+
+.title { background-color: #5CD6D6;
+}
+
+.lessertitle { background-color: #A3A3FF;
+
+}
+.bodytext {font-size: 15px;
+	font-weight: lighter;
+	max-width: 80%;
+	background-color: #E8FFA3;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 15px 0px 0px 5px;
+}
+
+.toc { line-height: 1.5;
+}
+
+.storebox { display: -webkit-flex;
+    display: flex;
+}
+
+.boximage { max-width: 400px
+}
+
+.boxtext { margin-left: 25px;
+	margin-top: 0px; 
+max-width: 705px;
+}
+
+.listy { font-style: italic;
+	margin: 0px 0px 0px 20px;
+}
+/*
+Comments are only to help PEOPLE read a code file. The
+computer ignores them.
+*/
