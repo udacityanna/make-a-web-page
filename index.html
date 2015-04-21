@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"><title>Udacity Notes for Intro to Programming</title>
+</head>
+
+<body>
+<h1 class="lessertitle">Table of Contents</h1>
+<h3>Project 1</h3><br><br>
+<div class="toc">
+	<a href="#lesson-1">1. HTML Concepts</a><br>
+<div class="listy">
+	<a href="#markup">markup</a><br>
+<a href="#boxes">boxes around content</a><br>
+<a href="#exhtml">example HTML</a><br>
+</div><br>
+
+<a href="#lesson-2">2. HTML Structure</a><br>
+<div class="listy">
+	<a href="#DOMtree">DOM tree</a><br>
+<a href="#syntax">syntax</a><br>
+</div><br>
+
+
+<a href="#lesson-3">3. Learning Some CSS</a><br>
+<div class="listy">
+	<a href="#includestructure">ways to include it</a><br>
+<a href="#cascade">putting the cascading into CSS</a><br>
+<a href="#inheritance">inheritance</a><br>
+<a href="#selector">selector</a><br>
+<a href="#csslinks">links</a><br>
+</div><br>
+
+<a href="#lesson-3-5">3 1/2. Combining HTML and CSS</a><br>
+<div class="listy">
+	<a href="#boxesbuilt">how boxes are built</a><br>
+<a href="#boxsizes">controlling box sizes</a><br>
+<a href="#keypoints">key points</a><br>
+<a href="#testingtips">tips for testing</a><br>
+</div><br>
+
+<a href="#links">4. Resources</a>
+</div>
+
+	<h1 class="title">Begin at the Beginning</h1>
+	<div class="bodytext">HTML is <i>reasonably</i> straightforward. I am going to learn about it at <a href="udacity.com">udacity</a>.
+	</div>
+<h2><a name="lesson-1">Lesson 1: HTML Concepts</a></h2>
+<div class="bodytext">
+	<p><b>HTML</b> is the <em>core</em> of the internet and holds every other type of file. It stands for <i>hyper text markup language</i>. A <i>hyperlink</i> is what connects things and makes them 'web-like'.
+		<br><br>
+	There are the main pieces; the browser, the internet, and servers using http protocol to communicate.
+		<br><br>
+	HTML is made of:
+	<span class="listy">
+	<br>Text content (what you see)
+	<br>markup (what it looks like)
+	<br>references to other documents (images or videos)
+	<br>links</span>
+</p>
+</div>
+
+<div class="bodytext">
+	<p><a name="markup">Markup</a> is made up of <b>tags</b>. opening/ closing tags
+	<br><code>&#60;tag&#62;; text &#60;/tag&#62;</code>
+	<br><br>
+	the whole thing is called an <i>element</i><br>
+	<code>&#60;b&#62; bold<br>
+	&#60;em&#62; emphasis (italic)<br><br></code>
+	If you skip an ending tag, everything after is that state.
+	</p>
+	</div>
+
+	<div class="bodytext">
+	<p>
+		HTML <b>attributes</b> are a property of an element.<br>
+	<code>&#60;tag attribute="value"&#62;  contents &#60;/tag&#62;</code>
+	<br><br>for example the link tag anchor:<br>
+	<code>&#60;a href="www.reddit.com"&#62; derp &#60;/a&#62;<br></code>
+	</p></div>
+<div class="bodytext">
+	<p> The image tag:<br>
+	<code>&#60;img src="url" alt="text"&#62;<br></code>
+	<u>alt Text</u> is <i>technically</i> required. Nice for blind people.<br>
+	<br>A VOID tag has no content. img tag has no closing tag<br>
+	all spaces turn into one space so you need the &#60;br&#62; tag. It's a void tag, too.
+	<br>
+	&#60;p&#62; is for paragraph. Not void. <code>&#60;p&#62; content &#60;/p&#62;</code>
+	</p></div>
+<div class="bodytext">
+	<p><a name="boxes"></a>
+	<code>&#60;br&#62; is inline.  &#60;p&#62; is block.</code> It makes an invisible box w/ height and width. 
+	<code>&#60;b&#62;, &#60;em&#62;, &#60;img&#62;</code> are all inline. So far <code>&#60;p&#62;</code> is the only block element covered.
+	</p>
+
+	<p>
+	<code>&#60;span&#62;</code> and <code>&#60;div&#62;</code> are two container tags. The are used for CSS and organization.
+	<code>&#60;Span&#62;</code> is inline and <code>&#60;div&#62;</code> is block<br><br>
+	<code>&#60;span class="foo"&#62; text &#60;/span&#62;<br></code>
+	<code>&#60;div class="bar"&#62; text &#60;/div&#62;</code></p>
+</div>
+
+<div class="bodytext"><p>
+	<a name="exhtml">Here</a> is an example html page:<br><br>
+		<code>&#60;! doctype html&#62;<br>
+	&#60;html&#62;<br>
+	<br>
+	&#60;head&#62;<br>
+	meta, javascpt, css<br>
+	&#60;title&#62;Some Words&#60;/title&#62;<br>
+	&#60;/head&#62;<br>
+	<br>
+	&#60;body&#62;<br>
+	The contents.<br>
+	&#60;/body&#62;<br>
+	<br>
+	&#60;/html&#62;
+	</code>
+	</p></div>
+
+<div class="bodytext"><p>Computers interpret things literally. 
+Reference material is where programmers get the details.</p></div>
+
+
+<h2><a name="lesson-2">Lesson 2: If a webpage were a house...</a></h2>
+<div class="bodytext">
+<p>html is the structure (e.g. walls, floor plan)<br>
+css is the style (e.g. paint color, type of carpet)<br>
+javascript is the appliances (e.g. garage door opener)</p></div>
+
+<div class="bodytext"><p>
+All visible elements (e.g. not the head) are rectangular. The page structure is based off boxes.<br>
+
+<a name="DOMtree">Document Object Model</a> "DOM" is the tree-like, branching structure of a page. Cross-platform and language independent. The browser creates a DOM tree.</p></div>
+
+<div class="bodytext"><p>
+<a name="syntax">HTML</a> has it's own syntax and rules. A "word" in this language is a tag. A tag is turned into elements using the DOM tree convention.<br><br>
+
+Tags can have an attribute and a value, too.<br>
+
+<code>&#60;h1 class="article"&#62; content &#60;/h1&#62;</code><br><br>
+
+Tags can have more than one class.</p></div>
+
+
+
+
+<h2><a name="lesson-3">Lesson 3: Learning Some CSS</a></h2>
+<div class="bodytext">
+	<p><a name="includestructure">This</a> is a CSS call in the head section. <br>
+	<code>&#60;link rel="stylesheet" type="text/css" href=""&#62;</code><br>
+	In Sublime Text, if you start typing "li" and then hit tab it fills in the rest for you, except the name of your actual file.
+	<br><br>
+	You can also use a &#60;style&#62; tag for small bits of css in an html document. Usually added into the head, but can be inline for odd circumstances. Not best practice.</p>
+</div>
+<div class="bodytext">
+	<p><a name="cascade">CSS</a> stands for Cascading Style Sheet and the key word is cascading.<br><br>
+
+	<b><u><a name="inheritance">Inheritance:</a></u></b> Relies on ancestor-descendant relationship to operate. Mechanism by which properties are applied not only to a specified element, but also its descendants. The enclosing elements pass down. This allows for less repetition and faster page loading.
+	<br><br>
+	In general, descendant elements inherit text-related properties, but box-related properties are not inherited. Properties that can be inherited are <i>color, font, letter-spacing, line-height, list-style, text-align, text-indent, text-transform, visibility, white-space and word-spacing</i>. <br><br>Properties that cannot be inherited are <i>background, border, display, float and clear, height and width, margin, min- and max-height and -width, outline, overflow, padding, position, text-decoration, vertical-align and z-index</i>.</p>
+</div>
+<div class="bodytext">
+	<p>
+	Given the following style sheet:<br>
+	<code>h1 {<br>
+	   color: pink;<br>
+	}</code><br><br>
+	Suppose there is an h1 element with an emphasizing element (em) inside:<br>
+	<code>&#60;h1&#62;<br>
+	   This to &#60;em&#62; illustrate &#60;/em&#62; inheritance<br>
+	&#60;/h1&#62;</code><br><br>
+	If no color has been assigned to the em element, the emphasized word "illustrate" will inherit the color of the parent element, h1. The style sheet h1 has the color pink, hence, the em element will likewise be in pink.
+	</p>
+</div>
+<div class="bodytext">
+	<p><b><a name="selector">Selector:</a></b> what your style will apply to.<br>
+	 a tag<br>
+	 a class (.description)<br><br></p>
+</div>
+<div class="bodytext">
+	<p><a name="csslinks">Learn more</a> at <a href="http://css-tricks.com/how-css-selectors-work/">CSS tricks.</a>  Or alternately <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Developer Reference.</a>
+	</p>
+
+</div>
+
+<h2><a name="lesson-3-5">Lesson 3 1/2: Combine HTML and CSS</a></h2>
+<div class="bodytext">
+	<p>Using the right HTML tag is important for organizational and searchability reasons.<br><br>
+
+	<a name="boxesbuilt">Box</a> model: Margin &#62; border &#62; padding &#62; content<br><br>
+
+	Padding is affected by the background color of the box.<br>
+	Border color inherited from color property of the box.<br>
+	Margin has no color: it's completely transparent.<br>
+	</p>
+</div>
+<div class="bodytext">
+	<p>
+	Size of the element is equal to the border, padding, and content widths.<br><br>
+
+	<a name="boxsizes"><code>Box-sizing: border-box;</code> is</a> made to include these together, so that you can calculate layout easier, but it's a new property and must have a browser specific prefix.<br><br>
+
+	Percentages are flowable sizes. Use a max width. Pixels are static.<br><br>
+
+	Alignment and positioning in CSS is one of the most difficult concepts. <code>Box-sizing: border-box;</code> makes knowing the total dimensions easier. Flex box makes flexible positioning easier.
+	</p></div>
+	
+<div class="bodytext">
+<div class="storebox"><div class="boximage"><img src="images/cursorreal.jpg" alt="pointer image"></div><div class="boxtext">
+	<p><a name="keypoints">By the end of this lesson</a> I should know: HTML elements are boxes, and each box has 4 components. Because of how they can interact, it can be hard to get the sizes of boxes right. Using percentages rather than absolute pixels can help as well as setting the box-sizing attribute to border-box for every element. Some of these display differently in different browsers, so that you may need prefixes.<br><br>
+
+	Since divs are block elements (not inline) by default they take up the entire width of the page. Adding the rule <code>display: flex; </code>to the appropriate CSS will override this behavior and let them sit beside each other.</p>
+	
+</div></div></div>
+<div class="bodytext">
+	<p><b><a name="testingtips">Tips for Testing</a></b><br><br>
+
+	You can use this CSS to display a red border around all the boxes for layout purposes.<br>
+	<code>* {<br>
+	   outline: 1px solid red !important;<br>
+	}<br><br></code>
+
+	First work on the structure by "boxifying". Then add tags. Then look for repeated styles and elements. Write HTML. Then apply styles from biggest to smallest.<br><br>
+
+	Then fix things and test. Change browsers, resize windows, etc. Browser dev tools are a great help.
+	</p>
+</div>
+
+<h2><a name="links">Resources</a></h2>
+<div class="bodytext">
+	<p>
+	<a href="http://learn-2-code.appspot.com/additional_resources/#topic-1">Andy's resources</a> <br>
+	Mozilla's <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code">HTML Elements</a><br>
+	Mozilla's<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS</a><br>
+	</p>
+</div>
+
+</body>
+</html>
